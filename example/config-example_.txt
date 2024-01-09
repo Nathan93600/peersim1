@@ -1,0 +1,25 @@
+# Basic simulation parameters
+simulation.endtime 1000
+network.size 10
+simulation.engine CycleBasedSimulator
+
+# Network topology
+network.node GeneralNode
+protocol.link example.Linkable
+control.graph example.GraphObserver
+
+# Token Passing Protocol
+protocol.token example.TokenApplication
+protocol.token.initToken true
+
+# Chandy-Lamport Protocol
+protocol.cl example.ChandyLamport
+
+# Controller
+control.snapshot example.SnapshotController
+control.snapshot.step 1
+
+
+
+
+

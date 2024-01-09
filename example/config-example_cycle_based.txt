@@ -1,0 +1,39 @@
+# General Parameters
+network.size 1000
+simulation.endtime 1000000
+simulation.engine=peersim.edsim.EDSimulator
+random.seed 1234567890
+
+# Protocol Parameters
+protocol.link peersim.core.IdleProtocol
+protocol.avg example.aggregation.AverageFunction
+protocol.avg.linkable link
+protocol.avg.step 10000
+protocol.avg.transport tr
+
+# Transport and Delay Parameters
+protocol.tr peersim.transport.UnreliableTransport
+protocol.tr.transport urt
+protocol.tr.drop 0
+protocol.urt peersim.transport.UniformRandomTransport
+protocol.urt.mindelay 0
+protocol.urt.maxdelay 0
+
+# Initialization
+init.rndlink WireKOut
+init.rndlink.k 20
+init.rndlink.protocol link
+
+init.vals LinearDistribution
+init.vals.protocol avg
+init.vals.max 1000
+init.vals.min 1
+
+init.sch CDScheduler
+init.sch.protocol avg
+init.sch.randstart
+
+# Control
+control.0 SingleValueObserver
+control.0.protocol avg
+control.0.step 10000

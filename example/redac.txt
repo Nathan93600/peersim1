@@ -1,0 +1,24 @@
+Maintenant, passons aux principales différences entre les deux versions du simulateur de moyenne :
+
+Gestion du temps :
+
+Modèle basé sur les événements : La gestion du temps est asynchrone et dépend des événements. Les calculs et les mises à jour sont déclenchés par des événements spécifiques.
+Modèle basé sur les cycles : La gestion du temps est synchrone et basée sur des cycles réguliers. Les calculs sont effectués à chaque cycle, qu'il y ait ou non des événements.
+Réactivité :
+
+Modèle basé sur les événements : Il peut réagir instantanément aux événements, ce qui peut être utile pour des simulations réactives.
+Modèle basé sur les cycles : Il suit un rythme régulier, ce qui peut rendre la réactivité aux événements moins immédiate.
+Complexité de la logique :
+
+Modèle basé sur les événements : La logique de simulation est généralement plus complexe, car elle doit gérer différents types d'événements et leurs interactions.
+Modèle basé sur les cycles : La logique de simulation est plus simple, car elle suit un schéma régulier et prévisible.
+Utilisation :
+
+Modèle basé sur les événements : Il est souvent utilisé pour des simulations où la chronologie des événements est cruciale, comme les simulations de réseaux informatiques.
+Modèle basé sur les cycles : Il convient généralement aux simulations où des calculs périodiques ou réguliers sont nécessaires, comme les simulations physiques.
+En résumé, les principaux points de différence entre le modèle basé sur les événements et le modèle basé sur les cycles dans le simulateur de moyenne résident dans la gestion du temps, la réactivité, la complexité de la logique et l'utilisation spécifique à chaque modèle. Le choix entre les deux dépendra des besoins spécifiques de la simulation que vous souhaitez réaliser.
+
+
+
+
+
